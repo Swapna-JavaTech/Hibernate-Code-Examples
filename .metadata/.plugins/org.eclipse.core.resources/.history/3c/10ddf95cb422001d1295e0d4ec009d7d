@@ -1,0 +1,5 @@
+package com.hexaware.hibernateexampleusingjavaconfig.dao;
+
+public class StudentDAO {
+
+}

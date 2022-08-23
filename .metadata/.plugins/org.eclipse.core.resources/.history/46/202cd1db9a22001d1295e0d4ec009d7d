@@ -1,0 +1,6 @@
+package com.hexaware.firsthibernateproject.entity;
+
+@Entit
+public class Student {
+
+}

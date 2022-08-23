@@ -1,0 +1,92 @@
+package com.hexaware.firsthibernateproject.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+/*
+ * Specifies that the class is an entity. 
+ * This annotation is applied to the entity class
+ */
+@Entity
+@Table(name = "student_info")
+public class Student {
+	
+	public Student() {
+		// default constructor
+	}
+	
+	/*
+	 * Specifies the primary key of an entity.
+	 * The field or property to which the Id annotation is applied
+	 * should be one of the following types: any Java primitive type;
+	 * any primitive wrapper type; 
+	 * String; 
+	 * java.util.Date; 
+	 * java.sql.Date; 
+	 * java.math.BigDecimal; 
+	 * java.math.BigInteger. 
+	   The mapped column for the primary key of the entity is assumed
+	   to be the primary key of the primary table. 
+	   If no Column annotationis specified, 
+	   the primary key column name is assumed to be the name
+	   of the primary key property or field. 
+	 */
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "studentid")
+	private Long studentId;
+	
+	@Column(name = "studentfirstname")
+    private String firstName;
+
+    @Column(name = "studentlastname")
+    private String lastName;
+
+    @Column(name = "studentemail")
+    private String email;
+	
+    public Student(String firstName, String lastName, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+    }
+
+	public Long getStudentId() {
+		return studentId;
+	}
+
+	public void setStudentId(Long studentId) {
+		this.studentId = studentId;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+    
+    
+}

@@ -1,0 +1,5 @@
+package com.hexaware.firsthibernateproject.util;
+
+public class HibernateUtil {
+
+}

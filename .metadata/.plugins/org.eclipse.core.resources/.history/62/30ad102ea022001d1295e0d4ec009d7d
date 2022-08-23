@@ -1,0 +1,14 @@
+package com.hexaware.firsthibernateproject;
+
+import com.hexaware.firsthibernateproject.entity.Student;
+
+public class MainApp {
+
+	public static void main(String[] args) {
+		
+		Student st = new Student("Rama","Krishna","rk@gmail.com");
+		Student st1 = new Student("Raja","Ram","rr@gmail.com");
+
+	}
+
+}

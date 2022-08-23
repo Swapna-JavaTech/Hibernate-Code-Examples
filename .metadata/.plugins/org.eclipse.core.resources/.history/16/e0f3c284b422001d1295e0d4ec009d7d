@@ -1,0 +1,32 @@
+package com.hexaware.hibernateexampleusingjavaconfig.dao;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import com.hexaware.hibernateexampleusingjavaconfig.entity.Student;
+import com.hexaware.hibernateexampleusingjavaconfig.util.HibernateUtil;
+
+public class StudentDAO {
+	
+	Session session = null;
+	Transaction transaction = null;
+	public void saveStudent(Student student) {
+		
+		try {
+			session= HibernateUtil.getSessionFactory().openSession();
+			//start transaction
+			transaction = session.beginTransaction();
+			//save thes student object
+			session.save(student);
+			//commit transaction
+			transaction.commit();
+			
+		}catch (Exception e) {
+			if(transaction!= null) {
+				transaction.rollback();
+			}
+			e.printStackTrace();
+		}
+	}
+
+}

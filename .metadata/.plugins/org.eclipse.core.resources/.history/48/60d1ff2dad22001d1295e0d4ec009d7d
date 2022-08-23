@@ -1,0 +1,5 @@
+package com.hexaware.hibernateexamplewithhbmfile.service;
+
+public class DBOperations {
+
+}
