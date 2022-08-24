@@ -17,4 +17,5 @@
 <item elementID="=hibernateexampleusingjavaconfig/src\/test\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1661227423198_2" label="Window Working Set" name="Aggregate for window 1661227423197"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1661310537248_3" label="Window Working Set" name="Aggregate for window 1661310537248"/>
 </workingSetManager>
